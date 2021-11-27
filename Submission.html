@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Page2.css">
+    <title>Task Submission Page</title>
+</head>
+<body>
+    <h1>
+        Submission Page
+    </h1>
+    <div class="main">
+    <h2>
+        Name of the employee: <span id="Name"></span>
+    </h2>
+    <h2> Task Given: <span id="Task"></span> </h2>
+    <form>
+        <input type="file" id="file" multiple class="file">
+        <input type="submit" class="submit" value="Submit" onclick="getfile()"/>
+    </form>
+    </div>
+    <script>
+        document.getElementById("Name").innerHTML = localStorage.getItem("passName");
+        document.getElementById("Task").innerHTML = localStorage.getItem("passTask");
+        var inputfile= document.getElementById("file");
+
+        function getfile() {
+        var file = document.getElementById('file').value; 
+        localStorage.setItem("inputFile",file);
+        if (file) {
+            alert("success");
+        }else{
+            alert("Fail");
+        }
+    }
+    </script>
+</body>
+</html>
+
+

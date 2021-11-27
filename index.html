@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Animation.css">
+    <title>Project</title>
+</head>
+<body>
+    <nav>
+        <div class="DropDown">
+         <button><a href="#" class="home">Home</a></button>
+         <div class="Add">
+            <input type="text" id="txt" class="form_in" placeholder="Enter new employee name..">
+            <button onclick="addLI()">Add</button>
+         </div>
+         <div class="Employees">
+            <button>Employees</button>
+            <ul id="list">
+                <li><a href="#">Rajdeep Podder</a></li>
+            </ul>  
+        </div>
+        <script src="./app.js"></script> 
+    </nav>
+    <section>
+    <div>
+        <h1 class="text-center" >Assign Task</h1>
+        <form action="Submission.html" class="form">
+            <input type="text" class="form-input" id="name" placeholder="Enter employee name.." />
+            <input type="text" class="form-input" id="task" placeholder="Enter Task" />
+            <input type="submit" class="submit" value="Submit" onclick="getTxt()"/>
+            <script src="./submit.js"></script>
+        </form>
+        </div>
+    </section>
+</body>
+</html>
